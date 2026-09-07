@@ -26,9 +26,9 @@
     never paid here before:
 
       step 1  SAVE THE CARD. §8a. Pine Labs' own co-branded page in
-              Travelxp red — their header, their field labels, their
-              RuPay | AGENTIC PAYMENTS lockup, their Safe & Secure / PCI
-              DSS / pine labs footer — then an explicit consent to let the
+              Travelxp red — their header, their field labels, the RuPay
+              mark under the button, their Safe & Secure / PCI DSS /
+              pine labs footer — then an explicit consent to let the
               agent pay, the issuer's OTP once, and a fingerprint enrolled
               at the same time so there is never an OTP again. After that
               the card is simply saved; the customer sees a normal saved
@@ -968,14 +968,8 @@
     transition:filter .15s,transform .15s;
   }
   /* RuPay's agentic lockup, as supplied */
-  .plpagentic{display:flex;align-items:center;justify-content:center;gap:10px;margin:20px 0 0}
+  .plpagentic{display:flex;align-items:center;justify-content:center;margin:20px 0 0}
   .plpagentic img{height:21px;width:auto;display:block}
-  .plpagentic s{text-decoration:none;width:1px;height:24px;background:#c9cbd6}
-  .plpagentic span{line-height:1.06}
-  .plpagentic b{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;
-    font-style:italic;color:#f47920}
-  .plpagentic i{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;
-    font-style:italic;color:#1b3281}
 
   .plpfoot{
     flex:none;margin-top:auto;border-top:1px solid #eee;padding:11px 16px 14px;
@@ -1634,8 +1628,7 @@ async function runLink(){
       '<div class="plplab" style="margin-top:6px">Card holder&rsquo;s name</div>' +
       '<div class="plpf" data-f="name"><u class="ph">Name on card</u></div>' +
       '<div class="plpcta" id="linkBtn">Authorise ₹15,000 ›</div>' +
-      '<div class="plpagentic">' + rp("lg") + '<s></s>' +
-        "<span><b>AGENTIC</b><i>PAYMENTS</i></span></div>" +
+      '<div class="plpagentic">' + rp("lg") + "</div>" +
       '<div class="plpfoot">' +
         '<span class="plpsafe">' + ICON.shield +
           "<b>Safe &amp; Secure<i>Payments</i></b></span>" +
